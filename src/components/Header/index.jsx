@@ -1,15 +1,16 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import styles from './Header.module.css';
 
 export default function Header() {
   return (
-    <header>
-      <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16}></Image>
-      <section>
-        <Link href="/">Produtos</Link>
-        <Link href="/">Sobre</Link>
-        <Link href="/">Contato</Link>
-      </section>
+    <header className={styles.header}>
+      <div>
+        <img src="/logo.png" alt="Vida logo"/>
+        <nav>
+          <a href="/">PRODUTOS</a>
+          <a href="/">SOBRE</a>
+          <a href="/">CONTATO</a>
+        </nav>
+      </div>
     </header>
   )
 }
